@@ -1,0 +1,41 @@
+h1 {
+  font-size:3rem;
+}
+
+ul.tasks {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body {
+  font-family: 'Handlee', cursive;
+  font-size: 1.5rem;
+}
+
+div.addBtnWrapper {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  height: 50px;
+  width: 500px;
+  border-radius: 10px;
+  margin: 5px auto;
+  font-size: 1.25rem;
+}
+
+.addBtnWrapper > button {
+  height: 40px;
+  width: 125px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
+main {
+  min-height: 80vh;
+}
