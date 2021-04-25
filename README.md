@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# MUSICAPI REACT VERSION
+
+Versión en react de aprendizaje sobre la anterior MusicApi realizada en JS Vanilla: (https://github.com/rovilram/musicAPI)
+
+
+
+
+
+
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
