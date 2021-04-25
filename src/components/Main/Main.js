@@ -1,25 +1,13 @@
 import './Main.css';
 import React, { useState, useEffect } from 'react';
 import Search from '../Search/Search';
+import BandInfo from '../BandInfo/BandInfo';
 import useFetchArtists from '../../hooks/useFetch/useFetchArtists';
+
 function Main(props) {
   const [searchText, setSearchText] = useState('');
-
-  /*   const [tasks, setTasks] = useState([]);
-  const [filter, setFilter] = useState('');
-  const [action, setAction] = useState('');
-  const [edit, setEdit] = useState(''); */
-
-  /*   useEffect(() => {
-    let newTasks = getTasks();
-    newTasks = newTasks ? newTasks : '[]';
-    setTasks([...tasks, ...newTasks]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); */
-  /* 
-  useEffect(() => {
-    saveTasks(tasks);
-  }); */
+  const [detailID, setdetailID] = useState('');
+  //const [artistDetail, setArtistDetail] = useState('');
 
   const [artistsState, fetchArtists] = useFetchArtists();
 
@@ -33,20 +21,25 @@ function Main(props) {
   const searchBand = (text) => {
     console.log('texto de búsqueda:', text);
     setSearchText(text);
+    setdetailID('');
+  };
+
+  const detailView = (id) => {
+    setdetailID(id);
   };
 
   const drawArtists = () => {
     const artists = artistsState.data.map((artist) => (
-      <a
-        href={`http://discogs.com${artist.uri}`}
+      <article
+        onClick={() => detailView(artist.id)}
         className="artistWrapper"
         target="_blank"
         rel="noreferrer"
         key={artist.id}
       >
         <div className="artistTitle">{artist.title}</div>
-        <img src={artist.cover_image} alt="" />
-      </a>
+        <img src={artist.thumb} alt="" />
+      </article>
     ));
     artistsState.data.map((artist) => console.log(artist));
     return artists;
@@ -57,7 +50,12 @@ function Main(props) {
       <Search searchBand={searchBand} />
       {artistsState.isLoading && <div>Cargando artista</div>}
       {artistsState.isFailed && <div>Fallo recuperando artista</div>}
-      {searchText && artistsState.isSuccess && drawArtists()}
+      {!detailID && searchText && artistsState.isSuccess && drawArtists()}
+      {detailID && (
+        <div>
+          <BandInfo id={detailID} />
+        </div>
+      )}
     </main>
   );
 }

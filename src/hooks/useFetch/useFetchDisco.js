@@ -24,7 +24,9 @@ export default function useFetchDisco() {
         'musicAPIs v0.1 https://rovilram.github.io/musicAPI/',
       ],
     };
-    const URL = `${discogsConf.URL}}/artists/${id}/releases?token=${discogsConf.TOKEN}&sort=year`;
+    const URL = `${discogsConf.URL}artists/${id}/releases?token=${discogsConf.TOKEN}&sort=year&per_page=200`;
+
+    console.log("DISCO URL", URL)
 
     try {
       setFetchState({
@@ -40,7 +42,7 @@ export default function useFetchDisco() {
         isSuccess: true,
         isFailed: false,
         error: null,
-        data: result.results,
+        data: result.releases,
       });
       return result;
     } catch (error) {
