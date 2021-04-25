@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rovilram/reactAPI/static/css/main.89a3854d.chunk.css",
+    "main.js": "/rovilram/reactAPI/static/js/main.76370736.chunk.js",
+    "main.js.map": "/rovilram/reactAPI/static/js/main.76370736.chunk.js.map",
+    "runtime-main.js": "/rovilram/reactAPI/static/js/runtime-main.30c5736c.js",
+    "runtime-main.js.map": "/rovilram/reactAPI/static/js/runtime-main.30c5736c.js.map",
+    "static/js/2.9a58f1b1.chunk.js": "/rovilram/reactAPI/static/js/2.9a58f1b1.chunk.js",
+    "static/js/2.9a58f1b1.chunk.js.map": "/rovilram/reactAPI/static/js/2.9a58f1b1.chunk.js.map",
+    "static/js/3.b88a29f1.chunk.js": "/rovilram/reactAPI/static/js/3.b88a29f1.chunk.js",
+    "static/js/3.b88a29f1.chunk.js.map": "/rovilram/reactAPI/static/js/3.b88a29f1.chunk.js.map",
+    "index.html": "/rovilram/reactAPI/index.html",
+    "static/css/main.89a3854d.chunk.css.map": "/rovilram/reactAPI/static/css/main.89a3854d.chunk.css.map",
+    "static/js/2.9a58f1b1.chunk.js.LICENSE.txt": "/rovilram/reactAPI/static/js/2.9a58f1b1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.30c5736c.js",
+    "static/js/2.9a58f1b1.chunk.js",
+    "static/css/main.89a3854d.chunk.css",
+    "static/js/main.76370736.chunk.js"
+  ]
+}
